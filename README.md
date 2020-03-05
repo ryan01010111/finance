@@ -1,1 +1,1 @@
-# finance
+Stock exchange platform for buying and selling stocks.
