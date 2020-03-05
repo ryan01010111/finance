@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+    <table class="table">
+        <tr>
+            <th>Symbol</th>
+            <th>Name</th>
+            <th>Shares</th>
+            <th>Price</th>
+            <th>Total</th>
+        </tr>
+        {% for row in userShares %}
+            <tr>
+                <td>{{ row['symbol'] }}</td>
+                <td>{{ row['name'] }}</td>
+                <td>{{ row['quantity'] }}</td>
+                <td>{{ row['price'] | usd}}</td>
+                <td>{{ (row['quantity'] * row['price']) | usd }}</td>
+            </tr>
+        {% endfor %}
+        <tr>
+            <td>CASH</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>{{ userCash | usd}}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>{{ userTotal | usd }}</td>
+        </tr>
+    </table>
+
+{% endblock %}

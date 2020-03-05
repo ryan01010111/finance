@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote for {{ quoteData["symbol"] }}
+{% endblock %}
+
+{% block main %}
+    {% if not quoteData %}
+        <p> The symbol ({{ symbol }}) could not be found.</p>
+    {% else %}
+        <p>A share of {{ quoteData["name"] }} ({{ quoteData["symbol"] }}) costs {{ quoteData["price"] | usd }}.</p>
+    {% endif %}
+{% endblock %}

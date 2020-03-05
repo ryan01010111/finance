@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+    <table class="table">
+        <tr>
+            <th>Buy/Sell</th>
+            <th>Symbol</th>
+            <th>Shares</th>
+            <th>Price</th>
+            <th>Timestamp</th>
+        </tr>
+        {% for row in userTransactions %}
+            <tr>
+                <td>{{ row['type'] }}</td>
+                <td>{{ row['symbol'] }}</td>
+                <td>{{ row['quantity'] }}</td>
+                <td>{{ row['price'] | usd}}</td>
+                <td>{{ row['timestamp'] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}

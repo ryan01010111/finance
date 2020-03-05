@@ -1,0 +1,66 @@
+nav .navbar-brand
+{
+    /* size for brand */
+    font-size: xx-large;
+}
+
+/* colors for brand */
+nav .navbar-brand .blue
+{
+    color: #fff;
+    background-color: #537fbe;
+    border-radius: 10px 0px 0px 10px;
+}
+nav .navbar-brand .red
+{
+    color: #fff;
+    background-color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #fff;
+    background-color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #fff;
+    background-color: #2e944b;
+}
+.navbar-finance
+{
+    border-radius: 0px 10px 10px 0px;
+}
+
+main .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main
+{
+    /* scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* center contents */
+    text-align: center;
+}
+
+main img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+}
+
+th
+{
+    background-color: #00bc8c;
+}
+
+.dropdown-menu
+{
+    border-color: #fff;
+}
